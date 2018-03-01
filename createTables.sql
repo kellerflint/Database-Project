@@ -1,0 +1,73 @@
+create table Genre(
+  genre_id int not null unique auto_increment,
+  genre_name varchar(50) not null,
+  primary key (genre_id)
+);
+
+create table Actor(
+  actor_id int not null unique auto_increment,
+  actor_lname varchar(35) not null,
+  actor_fname varchar(35) not null,
+  actor_dateOfBirth date not null,
+  actor_gender char(1) not null,
+  actor_birthPlace varchar(35) not null,
+  actor_nickname varchar(35),
+  primary key (actor_id)
+);
+
+create table Director(
+  director_id int not null unique auto_increment,
+  director_lname varchar(35) not null,
+  director_fname varchar(35) not null,
+  director_dateOfBirth date not null,
+  director_gender char(1) not null,
+  director_birthPlace varchar(35) not null,
+  director_nickname varchar(35),
+  primary key (director_id)
+);
+
+/*runtime in minutes*/
+create table Movie(
+  movie_id int not null unique auto_increment,
+  director_id integer,
+  genre_id integer,
+  movie_name varchar(75) not null,
+  movie_releaseDate date not null,
+  movie_budget int not null,
+  movie_country varchar(35) not null,
+  movie_runtime int not null,
+  primary key (movie_id),
+  foreign key (director_id) references Director(director_id) on update cascade,
+  foreign key (genre_id) references Genre(genre_id) on update cascade
+);
+
+create table Role(
+  movie_id integer,
+  actor_id integer,
+  role_lname varchar(35),
+  role_fname varchar(35) not null,
+  primary key (movie_id, actor_id),
+  foreign key (movie_id) references Movie(movie_id) on update cascade,
+  foreign key (actor_id) references Actor(actor_id) on update cascade
+);
+
+create table User(
+  user_id int not null unique auto_increment,
+  user_name varchar(35) not null,
+  user_favoriteMovie integer,
+  user_dateOfBirth date not null,
+  user_nickname varchar(35),
+  primary key (user_id),
+  foreign key (user_favoriteMovie) references Movie(movie_id) on update cascade
+);
+
+create table Review(
+  user_id integer,
+  movie_id integer,
+  review_rating int not null,
+  review_text varchar(5000),
+  review_date date not null,
+  primary key (user_id, movie_id),
+  foreign key (user_id) references User(user_id) on update cascade,
+  foreign key (movie_id) references Movie(movie_id) on update cascade
+);
