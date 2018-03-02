@@ -1,11 +1,11 @@
 create table Genre(
-  genre_id varchar(4) not null unique,
+  genre_id varchar(10) not null unique,
   genre_name varchar(50) not null,
   primary key (genre_id)
 );
 
 create table Actor(
-  actor_id varchar(6) not null unique,
+  actor_id varchar(10) not null unique,
   actor_lname varchar(35) not null,
   actor_fname varchar(35) not null,
   actor_dateOfBirth date not null,
@@ -16,7 +16,7 @@ create table Actor(
 );
 
 create table Director(
-  director_id varchar(6) not null unique,
+  director_id varchar(10) not null unique,
   director_lname varchar(35) not null,
   director_fname varchar(35) not null,
   director_dateOfBirth date not null,
@@ -28,7 +28,7 @@ create table Director(
 
 /*runtime in minutes*/
 create table Movie(
-  movie_id varchar(6) not null unique,
+  movie_id varchar(10) not null unique,
   director_id varchar,
   genre_id integer,
   movie_name varchar(75) not null,
