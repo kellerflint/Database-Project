@@ -39,11 +39,11 @@ insert into Movie values
   ('MOV-MN-000', 'DIR-JD-000', 'GEN-SF-000', 'Mr. Nobody', '2013-09-26', 43000000, 'Belgium', 141),
   ('MOV-CJ-000', 'DIR-JW-000', 'GEN-HO-000', 'The Conjuring', '2013-07-19', 20000000, 'United States', 112),
   ('MOV-AB-000', 'DIR-JL-000', 'GEN-MY-000', 'Annabelle', '2014-10-03', 6500000, 'United States', 99),
-  ('MOV-MD-000', 'DIR-DL-000', 'GEN-MY-000', 'Mulholland Drive', '2001-10-19', '15000000', 'United States', '147'),
-  ('MOV-BV-000', 'DIR-DL-000', 'GEN-CR-000', 'Blue Velvet', '1986-10-23', '6000000', 'United States', '121'),
-  ('MOV-ME-000', 'DIR-CN-000', 'GEN-DR-000', 'Memento', '2001-05-25', '9000000', 'United State', '113'),
-  ('MOV-AP-000', 'DIR-MH-000', 'GEN-DR-000', 'American Psycho', '2000-04-14', '7000000', 'United States', '102'),
-  ('MOV-28-000', 'DIR-DB-000', 'GEN-TH-000', '28 Days Later', '2003-06-27', '8000000', 'United Kingdom', '113'),
+  ('MOV-MD-000', 'DIR-DL-000', 'GEN-MY-000', 'Mulholland Drive', '2001-10-19', 15000000, 'United States', 147),
+  ('MOV-BV-000', 'DIR-DL-000', 'GEN-CR-000', 'Blue Velvet', '1986-10-23', 6000000, 'United States', 121),
+  ('MOV-ME-000', 'DIR-CN-000', 'GEN-DR-000', 'Memento', '2001-05-25', 9000000, 'United State', 113),
+  ('MOV-AP-000', 'DIR-MH-000', 'GEN-DR-000', 'American Psycho', '2000-04-14', 7000000, 'United States', 102),
+  ('MOV-28-000', 'DIR-DB-000', 'GEN-TH-000', '28 Days Later', '2003-06-27', 8000000, 'United Kingdom', 113),
   ('MOV-CJ-001', 'DIR-JW-000', 'GEN-HO-000', 'The Conjuring 2', '2016-07-10', 40000000, 'United States', 134);
 
 insert into Role values
@@ -65,21 +65,21 @@ insert into Role values
   ('MOV-28-000', 'ACT-CM-000', null, 'Jim');
 
 insert into User values
-  (0, 'Keller', 'MOV-LR-001', '1997-04-26', 'ham'),
-  (1, 'Ethan', 'MOV-MN-000', '1997-07-18', 'WaffleHunt'),
-  (2, 'Vance', 'MOV-CJ-000', '1997-06-30', 'lentils'),
-  (3, 'CJ', 'MOV-AB-000', '1996-04-20', 'ChinaMan'),
-  (4, 'Chris', 'MOV-CJ-001', '19950-02-10', 'LL4L')
-  (5, 'Seth', 'MOV-MN-000', '1997-04-26', 'snether'),
-  (9, 'Adam', 'Mulholland Drive', '1998-01-10', 'UpAndAdam'),
-  (10, 'Erik', 'Memento', '1998-02-20', 'Wheeler'),
-  (11, 'Dawson', 'Blue Velvet', '1998-06-30', 'Nom Nom'),
-  (12, 'Alex', '28 Days Later', '1996-04-20', 'Runci');
+  (0, 'Keller', '1997-04-26', 'ham'),
+  (1, 'Ethan', '1997-07-18', 'WaffleHunt'),
+  (2, 'Vance', '1997-06-30', 'lentils'),
+  (3, 'CJ', '1996-04-20', 'ChinaMan'),
+  (4, 'Chris', '1950-02-10', 'LL4L'),
+  (5, 'Seth', '1997-04-26', 'snether'),
+  (9, 'Adam', '1998-01-10', 'UpAndAdam'),
+  (10, 'Erik', '1998-02-20', 'Wheeler'),
+  (11, 'Dawson', '1998-06-30', 'Nom Nom'),
+  (12, 'Alex', '1996-04-20', 'Runci');
 
 insert into Review values
-  (0, 'MOV-LR-001', 5, 'They\'re taking the hobbits to Isengard!', '2018-3-1'),
+  (0, 'MOV-LR-001', 5, 'They\'re taking the hobbits to Isengard!', '2018-03-01'),
   (1, 'MOV-MN-000', 5, 'Quirky movie with beautifully well-written story and amazing cinematography. Actors Jared Leto and Juno Temple perform spectacularly in this sci-fi philosophical art film.', '2018-03-03'),
-  (5, 'MOV-LR-000', 3, 'It was okay I guess.'),
+  (5, 'MOV-LR-000', 3, 'It was okay I guess.', '2018-03-04'),
   (2, 'MOV-CJ-000', 4, 'I like horror movies.', '2018-03-01'),
   (3, 'MOV-AB-000', 5, 'I like spin off movies that do not live up to the mystery of the original.', '2018-02-27'),
   (4, 'MOV-CJ-001', 3, 'Although the sequel is not quite as good as the original, it is executed well.', '2018-03-03'),
