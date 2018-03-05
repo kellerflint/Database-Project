@@ -1,3 +1,13 @@
+/*
+drop table Review;
+drop table Role;
+drop table User;
+drop table Movie;
+drop table Actor;
+drop table Director;
+drop table Genre;
+*/
+
 create table Genre(
   genre_id varchar(10) not null unique,
   genre_name varchar(50) not null,
@@ -10,7 +20,7 @@ create table Actor(
   actor_fname varchar(35) not null,
   actor_dateOfBirth date not null,
   actor_gender char(1) not null,
-  actor_birthPlace varchar(35) not null,
+  actor_birthPlace varchar(50) not null,
   actor_nickname varchar(35),
   primary key (actor_id)
 );
@@ -54,11 +64,9 @@ create table Role(
 create table User(
   user_id int not null,
   user_name varchar(35) not null,
-  user_favoriteMovie varchar(10),
   user_dateOfBirth date not null,
   user_nickname varchar(35),
-  primary key (user_id),
-  foreign key (user_favoriteMovie) references Movie(movie_id) on update cascade
+  primary key (user_id)
 );
 
 create table Review(
